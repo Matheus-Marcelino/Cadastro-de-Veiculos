@@ -4,20 +4,20 @@ Criador do Qr Code
 © 2025 Matheus Marcelino Lopes
 Todos os direitos reservados.
 
-Projeto: Sistema Militar Gerador de Cartões de Veículos
+Projeto: Sistema Militar Interno Gerador de Cartões de Veículos
 GitHub: https://github.com/Matheus-Marcelino/Cadastro-de-Veiculos.git
 
 Este software é protegido pela Lei de Software Brasileira (Lei nº 9.609/1998).
 É proibida a cópia, redistribuição ou uso comercial sem autorização expressa do autor.
 O uso não autorizado para fins comerciais constitui violação de direitos autorais e está sujeito a penalidades legais.
 """
-from webbrowser import open as webopen
+
 from qrcode.main import QRCode
 from os.path import join
 from getpass import getuser
 
 
-def Creat_Qr(text, view, name):
+def Creat_Qr(text, name):
     """Cria o Qr Code
 
     Args:
@@ -39,5 +39,3 @@ def Creat_Qr(text, view, name):
     qr_img = qr.make_image()
 
     qr_img.save(f'{FILE}\\{treated_text}')
-    if view:
-        webopen(FILE+treated_text)  # mostra o Qr code na tela
